@@ -1,0 +1,92 @@
+body{
+  width:100%;
+  min-height:100vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin:0;
+}
+
+.card{
+
+  text-align:center;
+  width:100%;
+  max-width:85vw;
+}
+
+.logo{
+  width:80px;
+  height: 80px;
+  background-color: #f9b92d;
+  border-radius: 50%;
+  margin:auto;
+}
+.card h2{
+  font-family:monospace;
+}
+.card p{
+  font-family:sans-serif;
+  color:gray;
+  line-height: 150%;  /* sorok közötti hézag  */
+}
+.wrapper{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:40px;
+}
+/* amikor eléri a 600 px-t, cardon belül balra igazosódik a sor*/
+@media screen and (min-width: 600px){
+  .card{
+      text-align:left;
+      display:flex; /*mellé tette a köröket */
+      gap:20px;
+    }
+ 
+  .logo{
+    min-width:80px;
+  } 
+}
+
+@media screen and (min-width: 1024px){
+  .wrapper{
+  grid-template-columns:1fr 1fr 1fr;
+  max-width:1000px;
+
+  }
+  .card{
+    display:block;
+  }
+
+  .logo{
+    margin: 0;
+  }
+}
+
+/* FOOTER  */
+
+
+footer{
+  width:100%;
+  background-color: #333a44;
+  height:20px;
+  padding:20px;
+  display:flex;
+  justify-content: space-between;
+
+}
+
+footer a{
+  color:#8699b7;
+  text-decoration:none;
+  font-family:sans-serif;
+}
+.scootlogo{
+  color:white;
+  font-size:2rem;
+  font-family:monospace;
+}
+.left, .right{
+  display:flex;
+  gap:20px;
+  align-items:center;
+}
